@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #E5E5E5;
+}
+h4{
+    font-size: 16px;
+
+    line-height:18.75px;
+    
+}
+h5{
+    font-size: 14px;
+}
+strong{
+    font-weight: bold;
+}
+
+.conteiner-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.conteiner-batePapo{
+    height: 645px;
+    width: 375px;
+    margin-top: 50px;
+    background-color: #F3F3F3;
+    position: relative;}
+/* TOPO */
+.topo{
+    width: 375px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.085);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+
+}
+.logo{
+    height: 80px;
+    width: 80px;
+}
+.people{
+    height:50px;
+    width: 50px;
+}
+/* TOPO */
+
+/* BOTTOM */
+.bottom{
+    width: 375px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    box-shadow:  0px -5px 10px rgba(0, 0, 0, 0.085);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+   
+
+}
+.aviao{
+    height:26px;
+    width: 26px;
+    cursor: pointer;
+}
+input{
+    width: 280px;
+    height: 30px;
+    border: none;
+}
+/* BOTTOM */
+
+/* DISPLAY MENSAGEM*/
+.caixa-mensagem{
+    margin-top: 80px;
+    padding-top: 20px;
+    height: 500px;
+    overflow: scroll;
+}
+.status{
+    margin:5px 0 ;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #DCDCDC;
+}
+.message{
+    margin:5px 0 ;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.private_message{
+    margin:5px 0 ;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #FFDEDE;
+}
+/* DISPLAY MENSAGEM*/
+
+.cover-batepapo{
+
+    position: absolute;
+    margin-top: 50px;
+    height: 645px;
+    width: 375px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+}
+.opacidade-zero{
+    display: none;
+    opacity: 0;
+}
+
+.barra-lateral{
+    display: none;
+    height: 645px;
+    width: 256px;
+    background-color: white
+}
+.aberto{
+    display: initial;
+}
+.pointer{
+    cursor: pointer;
+}
+.categoria{
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    
+}
+.contatos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px 18px 18px;
+}
+.contatos div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.lista-contatos .people{
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+.visibilidade{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px 18px 18px;
+}
+.visibilidade div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.lista-visibilidade .cadeado{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+@media (max-width:645px ) {
+    .conteiner-total{
+        background-color: white;
+    }
+    .conteiner-batePapo,.cover-batepapo{
+    margin-top: 0;
+    }
+    .caixa-mensagem,.topo,.bottom,.conteiner-batePapo,.cover-batepapo{
+        width: 100%;
+        min-width: 300px;
+       }
+
+}

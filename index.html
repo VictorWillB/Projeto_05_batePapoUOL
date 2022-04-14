@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Bate-papo UOL
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Reset-CSS.css">
+    <link rel="stylesheet" href="estilo.css">
+<style> @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");</style>
+</head>
+<body>
+    <div class="conteiner-total">
+        <div class="conteiner-batePapo">
+            
+            <div class="topo">
+                <img src="imagens/batePapoUOL.png" class="logo">
+                <ion-icon class="people" name="people"></ion-icon></div>
+
+            <div class="caixa-mensagem">
+        </div>
+            <div class="bottom">
+                <input type="text" class="mensagem-escrita" placeholder="Escreva aqui...">
+                <ion-icon class="aviao"name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
+            </div>
+    </div>
+<div class="cover-batepapo opacidade-zero">
+        <div class="barra-lateral ">
+            <div class="categoria">
+                <h4><strong>
+                    Escolha um contato
+                para enviar mensagem:</strong></h4></div>
+            <div class="lista-contatos">
+                <div class="contatos">   
+            <div><ion-icon class="people" name="people"></ion-icon>
+            <h4>Todos</h4></div> 
+            </div>
+            <div class="contatos">   
+                <div><ion-icon class="people" name="person-circle-outline"></ion-icon>
+                <h4 class="pointer" onclick="">Pessoa online</h4>
+                </div>
+                <div class="selecionado">✔️</div >
+            </div>
+            
+                
+            </div>
+            <div class="categoria"><h4><strong>Escolha a visibilidade:</strong> </h4></div>
+            <div class="lista-visibilidade">
+                <div class="visibilidade">   
+                    <div><ion-icon class="cadeado" name="lock-open"></ion-icon>
+                    <h4>Público</h4></div>
+                    <div class="selecionado">✔️</div >
+                    
+                </div>
+                <div class="visibilidade">   
+                    <div><ion-icon class="cadeado" name="lock-closed"></ion-icon>
+                    <h4>Reservadamente</h4>
+                </div>
+                </div>
+            </div>
+        </div>
+</div>
+    
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script src="script.js"></script>
+</html>
