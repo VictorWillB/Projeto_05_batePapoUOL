@@ -51,7 +51,6 @@ function atualizarChat(){
 function recarregarMensagens(response){
  if(verificarMSG(response)){
      limparChat()
-    
      const mensagemAPI = response.data
      mensagemAPI.map(inserirMensagensChat)
  }
@@ -246,19 +245,3 @@ function limparVisibilidade(){
     }
 }
 
-function mensagemContato(contatoDesejado){
-    let mensagemEscrita = document.querySelector("input").value;
-    if(!mensagemEscrita){
-        alert ("Mensagem ínvalida. Por favor, escreva algo!")
-        return
-    }
-    let mensagem ={
-        from: nomeUser ,
-		to: contatoDesejado,
-		text: mensagemEscrita,
-		type: "message",
-    }
-    let promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages",mensagem );
-    promise.catch(erroMensagem)
-    limparInput()
-}
