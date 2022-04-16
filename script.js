@@ -132,7 +132,6 @@ function enviarMensagem(){
 function mensagemEnviada(){
         
 usuarioSelec=""
-visibSelec =""
 console.log("mensagem Enviada")
 limparVisibilidade()
 }
