@@ -15,7 +15,7 @@
             
             <div class="topo">
                 <img src="imagens/batePapoUOL.png" class="logo">
-                <ion-icon class="people" name="people"></ion-icon></div>
+                <ion-icon class="people pointer" name="people" onclick="abrir_BarraLateral()"></ion-icon></div>
 
             <div class="caixa-mensagem">
         </div>
@@ -24,38 +24,31 @@
                 <ion-icon class="aviao"name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
             </div>
     </div>
-<div class="cover-batepapo opacidade-zero">
-        <div class="barra-lateral ">
+<div class="cover-batepapo opacidade-zero" >
+    <div class="fundoEscuro"onclick="fechar_BarraLateral()"></div>
+        <div class="barra-lateral">
             <div class="categoria">
                 <h4><strong>
                     Escolha um contato
                 para enviar mensagem:</strong></h4></div>
             <div class="lista-contatos">
-                <div class="contatos">   
-            <div><ion-icon class="people" name="people"></ion-icon>
-            <h4>Todos</h4></div> 
-            </div>
-            <div class="contatos">   
-                <div><ion-icon class="people" name="person-circle-outline"></ion-icon>
-                <h4 class="pointer" onclick="">Pessoa online</h4>
-                </div>
-                <div class="selecionado">✔️</div >
-            </div>
-            
-                
+                                          
             </div>
             <div class="categoria"><h4><strong>Escolha a visibilidade:</strong> </h4></div>
             <div class="lista-visibilidade">
-                <div class="visibilidade">   
-                    <div><ion-icon class="cadeado" name="lock-open"></ion-icon>
-                    <h4>Público</h4></div>
-                    <div class="selecionado">✔️</div >
-                    
+                <div class="visibilidade" onclick="selecionarVisibilidade(this)">   
+                    <div class="pointer">
+                        <ion-icon class="cadeado" name="lock-open"></ion-icon>
+                        <h4>Público</h4>
+                    </div>
+                    <img src="imagens/verificado-Verde.png" class="verificado-verde">            
                 </div>
-                <div class="visibilidade">   
-                    <div><ion-icon class="cadeado" name="lock-closed"></ion-icon>
-                    <h4>Reservadamente</h4>
+                <div class="visibilidade" onclick="selecionarVisibilidade(this)">   
+                    <div class="pointer">
+                        <ion-icon class="cadeado" name="lock-closed"></ion-icon>
+                        <h4>Reservadamente</h4>
                 </div>
+                <img src="imagens/verificado-Verde.png" class="verificado-verde">  
                 </div>
             </div>
         </div>

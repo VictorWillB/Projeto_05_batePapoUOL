@@ -12,8 +12,10 @@ h4{
     
 }
 h5{
+
     font-size: 14px;
 }
+
 strong{
     font-weight: bold;
 }
@@ -22,6 +24,7 @@ strong{
     display: flex;
     justify-content: center;
     align-items: center;  
+
 }
 
 .conteiner-batePapo{
@@ -85,10 +88,15 @@ input{
 
 /* DISPLAY MENSAGEM*/
 .caixa-mensagem{
+    width: 100%;
     margin-top: 80px;
     padding-top: 20px;
     height: 500px;
-    overflow: scroll;
+    overflow:scroll;
+}
+.mensagem{
+    display: flex;
+    flex-flow: row ;
 }
 .status{
     margin:5px 0 ;
@@ -111,15 +119,16 @@ input{
     width: 100%;
     background-color: #FFDEDE;
 }
+.tempo{
+    color: gray;
+}
 /* DISPLAY MENSAGEM*/
 
 .cover-batepapo{
-
     position: absolute;
     margin-top: 50px;
     height: 645px;
     width: 375px;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: flex-end;
 }
@@ -127,12 +136,17 @@ input{
     display: none;
     opacity: 0;
 }
-
+.fundoEscuro{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 150px;
+    height: 100%;
+}
 .barra-lateral{
     display: none;
     height: 645px;
     width: 256px;
-    background-color: white
+    background-color: white;
+    overflow: scroll;
 }
 .aberto{
     display: initial;
@@ -149,14 +163,14 @@ input{
     text-align: center;
     
 }
-.contatos{
+.contato{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0 18px 18px 18px;
 }
-.contatos div{
+.contato div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -184,16 +198,41 @@ input{
     margin-right: 5px;
 }
 
+.verificado-verde{
+    display: none;
+    width: 20px;
+    height: 20px;
+   
+}
+.selecionado{
+    display: initial;
+}
+
 @media (max-width:645px ) {
     .conteiner-total{
         background-color: white;
-    }
-    .conteiner-batePapo,.cover-batepapo{
-    margin-top: 0;
-    }
-    .caixa-mensagem,.topo,.bottom,.conteiner-batePapo,.cover-batepapo{
-        width: 100%;
-        min-width: 300px;
-       }
+            width: 100%;
+            height: 100vh;
+        
+        }
+        .conteiner-batePapo,.cover-batepapo{
+            margin-top: 0;
+            }
+            .caixa-mensagem{
 
+                height: 485px;
+                min-width: 300px;
+            }
+
+            input{
+                width: 90%;
+            }
+            .fundoEscuro{
+                width: 100%;
+            }
+            .barra-lateral{
+                width:400px;
+            }
+           
+        
 }
