@@ -114,14 +114,16 @@ function enviarMensagem(){
             text: mensagemEscrita,
             type: "message",
         }
-    }
+    
+    } else{
         mensagem ={
         from: nomeUser ,
         to: usuarioSelec,
         text: mensagemEscrita,
         type: visibSelec,
     }
-    console.log(mensagem)
+}
+
     let promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages",mensagem );
    promise.then(mensagemEnviada)
     promise.catch(erroMensagem)
@@ -129,10 +131,11 @@ function enviarMensagem(){
 }
 
 function mensagemEnviada(){
+        
 usuarioSelec=""
 visibSelec =""
-limparVisibilidade()
 console.log("mensagem Enviada")
+limparVisibilidade()
 }
 
 function erroMensagem(erro){
@@ -238,7 +241,9 @@ function selecionarVisibilidade(tipo){
 
 function limparVisibilidade(){
     let visibilidadeSelecionada= document.querySelector(".lista-visibilidade .selecionado") 
+    if(!visibilidadeSelecionada){
     visibilidadeSelecionada.classList.remove("selecionado")
+    }
 }
 
 function mensagemContato(contatoDesejado){
